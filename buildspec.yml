@@ -2,10 +2,10 @@ version: 0.1
 phases:
   install:
     commands:
-      - sudo pip install --upgrade awscli
+      - pip install --upgrade awscli
       - aws --version
-      - sudo pip install panda3d
-      - sudo pip install -r requirements.txt
+      - pip install panda3d
+      - pip install -r requirements.txt
   build:
     commands:
       - echo Data build started on `date``
