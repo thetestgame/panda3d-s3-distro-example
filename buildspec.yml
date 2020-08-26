@@ -1,0 +1,18 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - sudo pip install --upgrade awscli
+      - aws --version
+      - sudo pip install panda3d
+      - sudo pip install -r requirements.txt
+  build:
+    commands:
+      - echo Data build started on `date``
+      - echo Packing Multifiles...
+      - multify -c -f output/pack_test.mf -v data/pack_test/
+      - multify -c -f output/pack_test2.mf -v data/pack_test2/ 
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'output'
