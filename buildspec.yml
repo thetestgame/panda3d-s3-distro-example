@@ -8,7 +8,7 @@ phases:
       - pip install -r requirements.txt
   build:
     commands:
-      - echo Data build started on `date``
+      - echo Data build started on `date`
       - echo Packing Multifiles...
       - multify -c -f output/pack_test.mf -v data/pack_test/
       - multify -c -f output/pack_test2.mf -v data/pack_test2/ 
